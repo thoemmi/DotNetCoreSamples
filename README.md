@@ -11,4 +11,5 @@ Some .net core and standard examples
 2. Execute the following commands:
 
     ```dotnet ef migrations add InitialCreate --startup-project ..\SelfHosted.Console\```
+    
     ```dotnet ef database update --startup-project ..\SelfHosted.Console\```
