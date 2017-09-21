@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using SelfHosted.Models.Domain;
 using SelfHosted.Models.Interfaces;
 using System;
@@ -13,10 +14,12 @@ namespace SelfHosted.WebApi.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
+        private readonly ILogger<UserController> _logger;
 
-        public UserController(IUserRepository userRepository)
+        public UserController(IUserRepository userRepository, ILogger<UserController> logger)
         {
             this._userRepository = userRepository;
+            this._logger = logger;
         }
 
         [HttpPost]
@@ -31,7 +34,11 @@ namespace SelfHosted.WebApi.Controllers
                 LastName = lastname
             };
 
-            return await _userRepository.Create(user);
+            var result =  await _userRepository.Create(user);
+
+            _logger.LogInformation($"user with id {result.UserId} created.");
+
+            return result;
         }
 
         [HttpPost]
@@ -39,7 +46,14 @@ namespace SelfHosted.WebApi.Controllers
         public async Task<bool> Remove(int userId)
         {
             var user = await GetUserById(userId);
-            return await _userRepository.Remove(user);
+            var result = await _userRepository.Remove(user);
+
+            if(result == true)
+                _logger.LogInformation($"user with id {user.UserId} deleted.");
+            else
+                _logger.LogInformation($"cant remove user with id {user.UserId}.");
+
+            return result;
         }
 
         [HttpGet]
