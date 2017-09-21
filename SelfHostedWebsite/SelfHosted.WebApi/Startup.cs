@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using NLog.Extensions.Logging;
 using SelfHosted.DataAccess.Repository;
 using SelfHosted.DataAccess.SqlDataContext;
 using SelfHosted.Models.Interfaces;
@@ -35,6 +36,8 @@ namespace SelfHosted.WebApi
             services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration["ConnectionStrings:SelfHostedSqlDatabase"]));
 
             //services.Configure<MoneyTrackerOptions>(Configuration);
+
+            // register IUserRepo in ioc container from .net core
             //services.AddSingleton<IUserRepository, UserRepository>();
 
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
@@ -62,8 +65,11 @@ namespace SelfHosted.WebApi
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole();
-            loggerFactory.AddDebug();
+            loggerFactory.AddNLog();
+            loggerFactory.ConfigureNLog("nLogConfigFiles/nlog_webapi.config");
+
+            //loggerFactory.AddConsole();
+            //loggerFactory.AddDebug();
 
             app.UseStatusCodePages();
             app.UseStaticFiles();

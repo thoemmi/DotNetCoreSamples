@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
+using NLog.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,8 +56,11 @@ namespace SelfHosted.Website
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole();
-            loggerFactory.AddDebug();
+            loggerFactory.AddNLog();
+            loggerFactory.ConfigureNLog("nLogConfigFiles/nlog_webui.config");
+
+            //loggerFactory.AddConsole();
+            //loggerFactory.AddDebug();
 
             if (env.IsDevelopment())
             {
