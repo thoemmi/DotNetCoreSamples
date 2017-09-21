@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -24,14 +26,16 @@ namespace SelfHosted.WebApi
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
         }
-        public IConfigurationRoot Configuration { get; }
 
-        public void ConfigureServices(IServiceCollection services)
+        public IConfigurationRoot Configuration { get; }
+        public IContainer ApplicationContainer { get; private set; }
+
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration["ConnectionStrings:SelfHostedSqlDatabase"]));
 
             //services.Configure<MoneyTrackerOptions>(Configuration);
-            services.AddSingleton<IUserRepository, UserRepository>();
+            //services.AddSingleton<IUserRepository, UserRepository>();
 
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
@@ -46,6 +50,14 @@ namespace SelfHosted.WebApi
             });
 
             services.AddMvc();
+
+            var containerBuilder = new ContainerBuilder();
+            containerBuilder.Populate(services);
+
+            containerBuilder.RegisterType<UserRepository>().As<IUserRepository>();
+            this.ApplicationContainer = containerBuilder.Build();
+
+            return new AutofacServiceProvider(this.ApplicationContainer);
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

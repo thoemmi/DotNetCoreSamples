@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Localization;
@@ -29,8 +31,10 @@ namespace SelfHosted.Website
         }
 
         public IConfigurationRoot Configuration { get; }
+        public IContainer ApplicationContainer { get; private set; }
 
-        public void ConfigureServices(IServiceCollection services)
+
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddMvc()
@@ -40,6 +44,13 @@ namespace SelfHosted.Website
                     options.AddCompilationAssemblies();
                 });
             services.AddStaticFiles();
+
+
+            var builder = new ContainerBuilder();
+            builder.Populate(services);
+            this.ApplicationContainer = builder.Build();
+
+            return new AutofacServiceProvider(this.ApplicationContainer);
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
