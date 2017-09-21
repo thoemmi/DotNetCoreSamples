@@ -10,10 +10,15 @@ namespace SelfHosted.Console
     {
         public void Start()
         {
-            System.Console.WriteLine("WebSite is starting ...");
-
             WebModule module = new WebModule();
             Task.Run(() => module.StartAsync());
+
+            System.Console.WriteLine("  WebUi is started.");
+        }
+
+        public void Stop()
+        {
+            System.Console.WriteLine("  WebUi is stoped.");
         }
     }
 }

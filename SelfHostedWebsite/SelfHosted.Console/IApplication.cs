@@ -7,5 +7,7 @@ namespace SelfHosted.Console
     public interface IApplication
     {
         void Start();
+
+        void Stop();
     }
 }
