@@ -6,6 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SelfHosted.WebApi\SelfHosted.WebApi.csproj" />
     <ProjectReference Include="..\SelfHosted.Website\SelfHosted.Website.csproj" />
   </ItemGroup>
 
