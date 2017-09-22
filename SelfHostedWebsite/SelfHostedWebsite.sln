@@ -9,9 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelfHosted.Console", "SelfH
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelfHosted.WebApi", "SelfHosted.WebApi\SelfHosted.WebApi.csproj", "{573A36BA-F0D1-4E61-A534-C21B87EC6DCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHosted.DataAccess", "SelfHosted.DataAccess\SelfHosted.DataAccess.csproj", "{4FC19DDD-D0D1-41B9-A54E-B1AA649CA206}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelfHosted.DataAccess", "SelfHosted.DataAccess\SelfHosted.DataAccess.csproj", "{4FC19DDD-D0D1-41B9-A54E-B1AA649CA206}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHosted.Models", "SelfHosted.Models\SelfHosted.Models.csproj", "{D88C85C8-7FBE-420A-898F-0FB7E27985C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelfHosted.Models", "SelfHosted.Models\SelfHosted.Models.csproj", "{D88C85C8-7FBE-420A-898F-0FB7E27985C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{DDA2EC4A-E49A-4F8A-8EE6-0C5C77D7DA2B}"
+	ProjectSection(SolutionItems) = preProject
+		Architecture.dgml = Architecture.dgml
+		Console.dgml = Console.dgml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
