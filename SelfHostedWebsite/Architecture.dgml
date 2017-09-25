@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DirectedGraph DataVirtualized="True" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="@10" Category="CodeSchema_Assembly" Bounds="162.914155525989,105.551003514217,195.43,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(4fc19ddd-d0d1-41b9-a54e-b1aa649ca206.OutputPath)" Group="Collapsed" Label="SelfHosted.DataAccess.dll" UseManualLocation="True" />
+    <Node Id="@10" Category="CodeSchema_Assembly" Bounds="169.914155525989,105.551003514217,195.43,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(4fc19ddd-d0d1-41b9-a54e-b1aa649ca206.OutputPath)" Group="Collapsed" Label="SelfHosted.DataAccess.dll" UseManualLocation="True" />
     <Node Id="@12" Category="CodeSchema_Assembly" Bounds="438.16865446359,-130.448996485782,212.686666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(e208abe7-5823-46ed-9d04-29e6d91b70cf.OutputPath)" Group="Collapsed" Label="SelfHosted.WebApiClients.dll" UseManualLocation="True" />
     <Node Id="@2" Category="CodeSchema_Assembly" Bounds="-101.851782047453,-53.4489964857824,178.003333333333,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(ff8b4e96-e51b-4d6c-aa92-883daefc41c5.OutputPath)" Group="Collapsed" Label="SelfHosted.Console.dll" UseManualLocation="True" />
     <Node Id="@4" Category="CodeSchema_Assembly" Bounds="177.813305033821,-132.448996485782,177.86,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(79a5bead-2e18-4864-8eed-acce2169b058.OutputPath)" Group="Collapsed" Label="SelfHosted.Website.dll" UseManualLocation="True" />
-    <Node Id="@6" Category="CodeSchema_Assembly" Bounds="171.26151417469,-5.44899648578236,177.216666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(573a36ba-f0d1-4e61-a534-c21b87ec6dcb.OutputPath)" Group="Collapsed" Label="SelfHosted.WebApi.dll" UseManualLocation="True" />
+    <Node Id="@6" Category="CodeSchema_Assembly" Bounds="179.26151417469,-6.44899648578236,177.216666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(573a36ba-f0d1-4e61-a534-c21b87ec6dcb.OutputPath)" Group="Collapsed" Label="SelfHosted.WebApi.dll" UseManualLocation="True" />
     <Node Id="@8" Category="CodeSchema_Assembly" Bounds="459.358903260529,-8.44899648578235,174.596666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(d88c85c8-7fbe-420a-898f-0fb7e27985c7.OutputPath)" Group="Collapsed" Label="SelfHosted.Models.dll" UseManualLocation="True" />
   </Nodes>
   <Links>
@@ -13,14 +13,14 @@
     <Link Source="@2" Target="@4" Category="References" Bounds="31.3893498746893,-105.001828984786,182.453579372882,51.5528324990033" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@2" Target="@6" Category="References" Bounds="58.1707082881744,-28.4489964857824,121.814557722643,21.4399368082592" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3">
+    <Link Source="@2" Target="@6" Category="References" Bounds="61.8094492173013,-28.4489964857824,122.52438472761,20.5138459799477" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3">
       <Category Ref="CodeSchema_Calls" />
     </Link>
     <Link Source="@4" Target="@12" Category="References" Bounds="355.673305033821,-119.30867952049,73.495582715975,0.529185522175368" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="8">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@6" Target="@10" Category="References" Bounds="259.955355167705,19.5510035142176,0.526728624030511,77.000210565534" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3" />
-    <Link Source="@6" Target="@8" Category="References" Bounds="348.478180841357,5.05834739982116,101.8812147979,1.06574994586745" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="68">
+    <Link Source="@6" Target="@10" Category="References" Bounds="267.675359745735,18.5510035142176,0.167624817865487,78.0000207825199" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3" />
+    <Link Source="@6" Target="@8" Category="References" Bounds="356.478180841357,4.74183893589579,93.8809540036743,0.673494983481965" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="68">
       <Category Ref="CodeSchema_Calls" />
     </Link>
   </Links>
