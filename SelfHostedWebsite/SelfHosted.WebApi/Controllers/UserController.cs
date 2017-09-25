@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using NSwag.Annotations;
 using SelfHosted.Models.Domain;
 using SelfHosted.Models.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SelfHosted.WebApi.Controllers
@@ -24,6 +24,7 @@ namespace SelfHosted.WebApi.Controllers
 
         [HttpPost]
         [Route("Create")]
+        [SwaggerOperation("User_CreateUser")]
         public async Task<User> Create(string firstname, string lastname, string email, string businessUnit)
         {
             var user = new User()
@@ -43,6 +44,7 @@ namespace SelfHosted.WebApi.Controllers
 
         [HttpPost]
         [Route("Remove")]
+        [SwaggerOperation("User_RemoveUser")]
         public async Task<bool> Remove(int userId)
         {
             var user = await GetUserById(userId);
@@ -58,6 +60,7 @@ namespace SelfHosted.WebApi.Controllers
 
         [HttpGet]
         [Route("GetAllUsers")]
+        [SwaggerOperation("User_GetAllUsers")]
         public async Task<IEnumerable<User>> GetAllUsers()
         {
             return await _userRepository.Get(null);
@@ -65,6 +68,7 @@ namespace SelfHosted.WebApi.Controllers
 
         [HttpGet]
         [Route("GetUserById")]
+        [SwaggerOperation("User_GetUserById")]
         public async Task<User> GetUserById(int userId)
         {
             return (await _userRepository.Get(m => m.UserId == userId))?.FirstOrDefault();

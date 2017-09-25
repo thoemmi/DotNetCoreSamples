@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SelfHosted.Models\SelfHosted.Models.csproj" />
     <ProjectReference Include="..\SelfHosted.WebApi\SelfHosted.WebApi.csproj" />
     <ProjectReference Include="..\SelfHosted.Website\SelfHosted.Website.csproj" />
   </ItemGroup>

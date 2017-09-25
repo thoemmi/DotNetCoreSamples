@@ -7,11 +7,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NLog.Extensions.Logging;
+using NSwag.AspNetCore;
 using SelfHosted.DataAccess.Repository;
 using SelfHosted.DataAccess.SqlDataContext;
 using SelfHosted.Models.Interfaces;
-using Swashbuckle.AspNetCore.Swagger;
 using System;
+using System.Reflection;
 
 namespace SelfHosted.WebApi
 {
@@ -47,10 +48,10 @@ namespace SelfHosted.WebApi
                        .AllowAnyHeader();
             }));
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v2", new Info { Title = "My SelfHosted API", Version = "v2" });
-            });
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v2", new Info { Title = "My SelfHosted API", Version = "v2" });
+            //});
 
             services.AddMvc();
 
@@ -75,11 +76,21 @@ namespace SelfHosted.WebApi
             app.UseStaticFiles();
 
             app.UseCors("MyPolicy");
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
+
+            app.UseSwagger(typeof(Startup).Assembly, new SwaggerSettings()
             {
-                c.SwaggerEndpoint("/swagger/v2/swagger.json", "My SelfHosted V1");
+            
             });
+
+            app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, new SwaggerUiSettings
+            {
+                DefaultUrlTemplate = "api/{controller}/{action}/{id?}"
+            });
+
+            //app.UseSwaggerUI(c =>
+            //{
+            //    c.SwaggerEndpoint("/swagger/v2/swagger.json", "My SelfHosted V1");
+            //});
 
             app.UseMvc();
         }

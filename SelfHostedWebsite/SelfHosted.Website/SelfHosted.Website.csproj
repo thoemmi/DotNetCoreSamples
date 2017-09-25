@@ -28,4 +28,9 @@
     <PackageReference Include="NLog.Extensions.Logging" Version="1.0.0-rtm-beta5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SelfHosted.Models\SelfHosted.Models.csproj" />
+    <ProjectReference Include="..\SelfHosted.WebApiClients\SelfHosted.WebApiClients.csproj" />
+  </ItemGroup>
+
 </Project>

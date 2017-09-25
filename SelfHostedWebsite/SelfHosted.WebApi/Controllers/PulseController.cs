@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using NSwag.Annotations;
 
 namespace SelfHosted.WebApi.Controllers
 {
@@ -10,6 +8,7 @@ namespace SelfHosted.WebApi.Controllers
     {
         [HttpGet]
         [Route("IsAlive")]
+        [SwaggerOperation("Pulse_IsAlive")]
         public bool IsAlive()
         {
             return true;

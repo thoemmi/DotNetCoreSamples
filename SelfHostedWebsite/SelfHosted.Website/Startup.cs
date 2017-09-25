@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using NLog.Extensions.Logging;
+using SelfHosted.Models.Common;
+using SelfHosted.WebApi.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +39,11 @@ namespace SelfHosted.Website
 
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+            services.Configure<Configuration>(Configuration);
+
             services.AddSingleton<IConfiguration>(Configuration);
+            services.AddSingleton<IUserClient>(new UserClient() { BaseUrl = Configuration["Services:WebApiUrl"] });
+
             services.AddMvc()
                 .AddRazorOptions(options =>
                 {
@@ -59,7 +65,7 @@ namespace SelfHosted.Website
             loggerFactory.AddNLog();
             loggerFactory.ConfigureNLog("nLogConfigFiles/nlog_webui.config");
 
-            //loggerFactory.AddConsole();
+            loggerFactory.AddConsole();
             //loggerFactory.AddDebug();
 
             if (env.IsDevelopment())

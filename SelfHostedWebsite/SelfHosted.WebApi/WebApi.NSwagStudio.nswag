@@ -1,0 +1,60 @@
+﻿{
+  "swaggerGenerator": {
+    "fromSwagger": {
+      "json": "{\r\n  \"x-generator\": \"NSwag v11.7.2.0 (NJsonSchema v9.6.3.0)\",\r\n  \"swagger\": \"2.0\",\r\n  \"info\": {\r\n    \"title\": \"Web API Swagger specification\",\r\n    \"version\": \"1.0.0\"\r\n  },\r\n  \"host\": \"localhost:5004\",\r\n  \"basePath\": \"\",\r\n  \"schemes\": [\r\n    \"http\"\r\n  ],\r\n  \"consumes\": [\r\n    \"application/json\"\r\n  ],\r\n  \"produces\": [\r\n    \"application/json\"\r\n  ],\r\n  \"paths\": {\r\n    \"/api/Pulse/IsAlive\": {\r\n      \"get\": {\r\n        \"tags\": [\r\n          \"Pulse\"\r\n        ],\r\n        \"operationId\": \"Pulse_IsAlive\",\r\n        \"parameters\": [],\r\n        \"responses\": {\r\n          \"200\": {\r\n            \"description\": \"\",\r\n            \"schema\": {\r\n              \"type\": \"boolean\"\r\n            },\r\n            \"x-nullable\": false\r\n          }\r\n        }\r\n      }\r\n    },\r\n    \"/api/User/Create\": {\r\n      \"post\": {\r\n        \"tags\": [\r\n          \"User\"\r\n        ],\r\n        \"operationId\": \"User_CreateUser\",\r\n        \"parameters\": [\r\n          {\r\n            \"type\": \"string\",\r\n            \"name\": \"firstname\",\r\n            \"in\": \"query\",\r\n            \"required\": true,\r\n            \"x-nullable\": true\r\n          },\r\n          {\r\n            \"type\": \"string\",\r\n            \"name\": \"lastname\",\r\n            \"in\": \"query\",\r\n            \"required\": true,\r\n            \"x-nullable\": true\r\n          },\r\n          {\r\n            \"type\": \"string\",\r\n            \"name\": \"email\",\r\n            \"in\": \"query\",\r\n            \"required\": true,\r\n            \"x-nullable\": true\r\n          },\r\n          {\r\n            \"type\": \"string\",\r\n            \"name\": \"businessUnit\",\r\n            \"in\": \"query\",\r\n            \"required\": true,\r\n            \"x-nullable\": true\r\n          }\r\n        ],\r\n        \"responses\": {\r\n          \"200\": {\r\n            \"description\": \"\",\r\n            \"schema\": {\r\n              \"$ref\": \"#/definitions/User\"\r\n            },\r\n            \"x-nullable\": true\r\n          }\r\n        }\r\n      }\r\n    },\r\n    \"/api/User/Remove\": {\r\n      \"post\": {\r\n        \"tags\": [\r\n          \"User\"\r\n        ],\r\n        \"operationId\": \"User_RemoveUser\",\r\n        \"parameters\": [\r\n          {\r\n            \"type\": \"integer\",\r\n            \"name\": \"userId\",\r\n            \"in\": \"query\",\r\n            \"required\": true,\r\n            \"x-nullable\": false,\r\n            \"format\": \"int32\"\r\n          }\r\n        ],\r\n        \"responses\": {\r\n          \"200\": {\r\n            \"description\": \"\",\r\n            \"schema\": {\r\n              \"type\": \"boolean\"\r\n            },\r\n            \"x-nullable\": false\r\n          }\r\n        }\r\n      }\r\n    },\r\n    \"/api/User/GetAllUsers\": {\r\n      \"get\": {\r\n        \"tags\": [\r\n          \"User\"\r\n        ],\r\n        \"operationId\": \"User_GetAllUsers\",\r\n        \"parameters\": [],\r\n        \"responses\": {\r\n          \"200\": {\r\n            \"description\": \"\",\r\n            \"schema\": {\r\n              \"type\": \"array\",\r\n              \"items\": {\r\n                \"$ref\": \"#/definitions/User\"\r\n              }\r\n            },\r\n            \"x-nullable\": true\r\n          }\r\n        }\r\n      }\r\n    },\r\n    \"/api/User/GetUserById\": {\r\n      \"get\": {\r\n        \"tags\": [\r\n          \"User\"\r\n        ],\r\n        \"operationId\": \"User_GetUserById\",\r\n        \"parameters\": [\r\n          {\r\n            \"type\": \"integer\",\r\n            \"name\": \"userId\",\r\n            \"in\": \"query\",\r\n            \"required\": true,\r\n            \"x-nullable\": false,\r\n            \"format\": \"int32\"\r\n          }\r\n        ],\r\n        \"responses\": {\r\n          \"200\": {\r\n            \"description\": \"\",\r\n            \"schema\": {\r\n              \"$ref\": \"#/definitions/User\"\r\n            },\r\n            \"x-nullable\": true\r\n          }\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"definitions\": {\r\n    \"User\": {\r\n      \"type\": \"object\",\r\n      \"additionalProperties\": false,\r\n      \"required\": [\r\n        \"userId\"\r\n      ],\r\n      \"properties\": {\r\n        \"userId\": {\r\n          \"type\": \"integer\",\r\n          \"format\": \"int32\"\r\n        },\r\n        \"firstname\": {\r\n          \"type\": \"string\"\r\n        },\r\n        \"lastName\": {\r\n          \"type\": \"string\"\r\n        },\r\n        \"email\": {\r\n          \"type\": \"string\"\r\n        },\r\n        \"businessUnit\": {\r\n          \"type\": \"string\"\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"parameters\": {},\r\n  \"responses\": {},\r\n  \"securityDefinitions\": {}\r\n}",
+      "url": "http://localhost:5004/swagger/v1/swagger.json",
+      "output": null
+    }
+  },
+  "codeGenerators": {
+    "swaggerToCSharpClient": {
+      "generateClientClasses": true,
+      "generateClientInterfaces": false,
+      "generateDtoTypes": false,
+      "injectHttpClient": false,
+      "disposeHttpClient": true,
+      "generateExceptionClasses": false,
+      "exceptionClass": "SwaggerException",
+      "wrapDtoExceptions": true,
+      "useHttpClientCreationMethod": false,
+      "httpClientType": "System.Net.Http.HttpClient",
+      "useHttpRequestMessageCreationMethod": false,
+      "useBaseUrl": true,
+      "generateSyncMethods": false,
+      "clientClassAccessModifier": "public",
+      "generateContractsOutput": true,
+      "contractsNamespace": "",
+      "parameterDateTimeFormat": "s",
+      "generateUpdateJsonSerializerSettingsMethod": true,
+      "serializeTypeInformation": false,
+      "className": "{controller}Client",
+      "namespace": "SelfHosted.WebApi.Client",
+      "additionalNamespaceUsages": [
+        "SelfHosted.Models.Domain",
+        "SelfHosted.WebApiClients.Exceptions"
+      ],
+      "generateOptionalParameters": false,
+      "requiredPropertiesMustBeDefined": true,
+      "dateType": "System.DateTime",
+      "dateTimeType": "System.DateTime",
+      "timeType": "System.TimeSpan",
+      "timeSpanType": "System.TimeSpan",
+      "arrayType": "System.Collections.ObjectModel.ObservableCollection",
+      "dictionaryType": "System.Collections.Generic.Dictionary",
+      "classStyle": "Poco",
+      "operationGenerationMode": "MultipleClientsFromOperationId",
+      "generateDefaultValues": true,
+      "generateDataAnnotations": true,
+      "excludedTypeNames": [
+        "SelfHosted.Models.Domain"
+      ],
+      "wrapResponses": false,
+      "generateResponseClasses": true,
+      "responseClass": "SwaggerResponse",
+      "handleReferences": false,
+      "generateImmutableArrayProperties": false,
+      "generateImmutableDictionaryProperties": false,
+      "output": "../SelfHosted.WebApiClients/Client.cs"
+    }
+  }
+}
