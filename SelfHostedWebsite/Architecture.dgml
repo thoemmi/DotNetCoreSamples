@@ -1,44 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DirectedGraph DataVirtualized="True" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="(@3)" Category="CodeSchema_Assembly" Bounds="0,55,177.86,25" CodeSchemaProperty_StrongName="SelfHosted.Website, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(dd883949-25f5-49f2-89af-1c9b0cfe6235.OutputPath)" Group="Collapsed" Label="SelfHosted.Website.dll" />
-    <Node Id="(@8)" Category="CodeSchema_Assembly" Bounds="416.215,55,195.43,25" CodeSchemaProperty_StrongName="SelfHosted.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(4fc19ddd-d0d1-41b9-a54e-b1aa649ca206.OutputPath)" Group="Collapsed" Label="SelfHosted.DataAccess.dll" />
-    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="207.928333333333,0,178.003333333333,25" CodeSchemaProperty_StrongName="SelfHosted.Console, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(ff8b4e96-e51b-4d6c-aa92-883daefc41c5.OutputPath)" Group="Collapsed" Label="SelfHosted.Console.dll" />
-    <Node Id="@5" Category="CodeSchema_Assembly" Bounds="208.321666666667,55,177.216666666667,25" CodeSchemaProperty_StrongName="SelfHosted.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(573a36ba-f0d1-4e61-a534-c21b87ec6dcb.OutputPath)" Group="Collapsed" Label="SelfHosted.WebApi.dll" />
-    <Node Id="@7" Category="CodeSchema_Assembly" Bounds="426.631666666667,110,174.596666666667,25" CodeSchemaProperty_StrongName="SelfHosted.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(d88c85c8-7fbe-420a-898f-0fb7e27985c7.OutputPath)" Group="Collapsed" Label="SelfHosted.Models.dll" />
+    <Node Id="@10" Category="CodeSchema_Assembly" Bounds="162.914155525989,105.551003514217,195.43,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(4fc19ddd-d0d1-41b9-a54e-b1aa649ca206.OutputPath)" Group="Collapsed" Label="SelfHosted.DataAccess.dll" UseManualLocation="True" />
+    <Node Id="@12" Category="CodeSchema_Assembly" Bounds="438.16865446359,-130.448996485782,212.686666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(e208abe7-5823-46ed-9d04-29e6d91b70cf.OutputPath)" Group="Collapsed" Label="SelfHosted.WebApiClients.dll" UseManualLocation="True" />
+    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="-101.851782047453,-53.4489964857824,178.003333333333,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(ff8b4e96-e51b-4d6c-aa92-883daefc41c5.OutputPath)" Group="Collapsed" Label="SelfHosted.Console.dll" UseManualLocation="True" />
+    <Node Id="@4" Category="CodeSchema_Assembly" Bounds="177.813305033821,-132.448996485782,177.86,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(79a5bead-2e18-4864-8eed-acce2169b058.OutputPath)" Group="Collapsed" Label="SelfHosted.Website.dll" UseManualLocation="True" />
+    <Node Id="@6" Category="CodeSchema_Assembly" Bounds="171.26151417469,-5.44899648578236,177.216666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(573a36ba-f0d1-4e61-a534-c21b87ec6dcb.OutputPath)" Group="Collapsed" Label="SelfHosted.WebApi.dll" UseManualLocation="True" />
+    <Node Id="@8" Category="CodeSchema_Assembly" Bounds="459.358903260529,-8.44899648578235,174.596666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(d88c85c8-7fbe-420a-898f-0fb7e27985c7.OutputPath)" Group="Collapsed" Label="SelfHosted.Models.dll" UseManualLocation="True" />
   </Nodes>
   <Links>
-    <Link Source="(@8)" Target="@7" Category="References" Bounds="513.929992675781,80,0,21" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="62">
-      <Category Ref="CodeMap_ProjectReference" />
-      <Category Ref="CodeSchema_Calls" />
-      <Category Ref="Implements" />
-    </Link>
-    <Link Source="@2" Target="(@3)" Category="References" Bounds="144.903686523438,25,104.75358581543,27.6992683410645" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3">
-      <Category Ref="CodeMap_ProjectReference" />
+    <Link Source="@12" Target="@8" Category="References" Bounds="544.731787878577,-105.448996485782,1.54741703534125,88.0013910652089" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="42" />
+    <Link Source="@2" Target="@4" Category="References" Bounds="31.3893498746893,-105.001828984786,182.453579372882,51.5528324990033" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@2" Target="@5" Category="References" Bounds="296.929992675781,25,0,21" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3">
-      <Category Ref="CodeMap_ProjectReference" />
+    <Link Source="@2" Target="@6" Category="References" Bounds="58.1707082881744,-28.4489964857824,121.814557722643,21.4399368082592" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@5" Target="@7" Category="References" Bounds="346.248168945313,80,109.639495849609,27.7888107299805" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="68">
-      <Category Ref="CodeMap_ProjectReference" />
+    <Link Source="@4" Target="@12" Category="References" Bounds="355.673305033821,-119.30867952049,73.495582715975,0.529185522175368" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="8">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@6" Target="@10" Category="References" Bounds="259.955355167705,19.5510035142176,0.526728624030511,77.000210565534" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3" />
+    <Link Source="@6" Target="@8" Category="References" Bounds="348.478180841357,5.05834739982116,101.8812147979,1.06574994586745" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="68">
       <Category Ref="CodeSchema_Calls" />
     </Link>
   </Links>
   <Categories>
-    <Category Id="CodeMap_ProjectReference" Label="Project Reference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
     <Category Id="CodeSchema_Assembly" Label="Assembly" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" NavigationActionLabel="Assemblies" />
     <Category Id="CodeSchema_Calls" Label="Calls" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Called By" OutgoingActionLabel="Calls" />
     <Category Id="File" Label="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="Files" />
-    <Category Id="Implements" Label="Implements" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Implemented by" OutgoingActionLabel="Implements" />
     <Category Id="References" Label="References" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
   </Categories>
   <Properties>
     <Property Id="Bounds" DataType="System.Windows.Rect" />
     <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
     <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
-    <Property Id="CodeSchemaProperty_StrongName" Label="StrongName" Description="StrongName" DataType="System.String" />
     <Property Id="DataVirtualized" Label="Data Virtualized" Description="If true, the graph can contain nodes and links that represent data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
     <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
     <Property Id="DelayedChildNodesState" Label="Delayed Child Nodes State" Description="Unspecified if the delayed child nodes state is not specified. NotFetched if the group contains child nodes that are not fetched into the graph yet. Fetched if the group has all its delayed child nodes already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
@@ -57,6 +52,7 @@
     <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
     <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
     <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
     <Property Id="Value" DataType="System.String" />
     <Property Id="ValueLabel" DataType="System.String" />
     <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
@@ -69,12 +65,16 @@
   <IdentifierAliases>
     <Alias n="1" Uri="Assembly=$(ff8b4e96-e51b-4d6c-aa92-883daefc41c5.OutputPathUri)" />
     <Alias n="2" Id="(@1)" />
-    <Alias n="3" Uri="Assembly=$(dd883949-25f5-49f2-89af-1c9b0cfe6235.OutputPathUri)" />
-    <Alias n="4" Uri="Assembly=$(573a36ba-f0d1-4e61-a534-c21b87ec6dcb.OutputPathUri)" />
-    <Alias n="5" Id="(@4)" />
-    <Alias n="6" Uri="Assembly=$(d88c85c8-7fbe-420a-898f-0fb7e27985c7.OutputPathUri)" />
-    <Alias n="7" Id="(@6)" />
-    <Alias n="8" Uri="Assembly=$(4fc19ddd-d0d1-41b9-a54e-b1aa649ca206.OutputPathUri)" />
+    <Alias n="3" Uri="Assembly=$(79a5bead-2e18-4864-8eed-acce2169b058.OutputPathUri)" />
+    <Alias n="4" Id="(@3)" />
+    <Alias n="5" Uri="Assembly=$(573a36ba-f0d1-4e61-a534-c21b87ec6dcb.OutputPathUri)" />
+    <Alias n="6" Id="(@5)" />
+    <Alias n="7" Uri="Assembly=$(d88c85c8-7fbe-420a-898f-0fb7e27985c7.OutputPathUri)" />
+    <Alias n="8" Id="(@7)" />
+    <Alias n="9" Uri="Assembly=$(4fc19ddd-d0d1-41b9-a54e-b1aa649ca206.OutputPathUri)" />
+    <Alias n="10" Id="(@9)" />
+    <Alias n="11" Uri="Assembly=$(e208abe7-5823-46ed-9d04-29e6d91b70cf.OutputPathUri)" />
+    <Alias n="12" Id="(@11)" />
   </IdentifierAliases>
   <Styles>
     <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
@@ -298,10 +298,13 @@
     <Path Id="4fc19ddd-d0d1-41b9-a54e-b1aa649ca206.OutputPathUri" Value="file:///C:/Learning/GitHub/DotNetCoreSamples/SelfHostedWebsite/SelfHosted.DataAccess/bin/Debug/netstandard2.0/SelfHosted.DataAccess.dll" />
     <Path Id="573a36ba-f0d1-4e61-a534-c21b87ec6dcb.OutputPath" Value="C:\Learning\GitHub\DotNetCoreSamples\SelfHostedWebsite\SelfHosted.WebApi\bin\Debug\netstandard2.0\SelfHosted.WebApi.dll" />
     <Path Id="573a36ba-f0d1-4e61-a534-c21b87ec6dcb.OutputPathUri" Value="file:///C:/Learning/GitHub/DotNetCoreSamples/SelfHostedWebsite/SelfHosted.WebApi/bin/Debug/netstandard2.0/SelfHosted.WebApi.dll" />
+    <Path Id="79a5bead-2e18-4864-8eed-acce2169b058.OutputPath" Value="C:\Learning\GitHub\DotNetCoreSamples\SelfHostedWebsite\SelfHosted.Website\bin\Debug\netcoreapp2.0\SelfHosted.Website.dll" />
+    <Path Id="79a5bead-2e18-4864-8eed-acce2169b058.OutputPathUri" Value="file:///C:/Learning/GitHub/DotNetCoreSamples/SelfHostedWebsite/SelfHosted.Website/bin/Debug/netcoreapp2.0/SelfHosted.Website.dll" />
     <Path Id="d88c85c8-7fbe-420a-898f-0fb7e27985c7.OutputPath" Value="C:\Learning\GitHub\DotNetCoreSamples\SelfHostedWebsite\SelfHosted.Models\bin\Debug\netstandard2.0\SelfHosted.Models.dll" />
     <Path Id="d88c85c8-7fbe-420a-898f-0fb7e27985c7.OutputPathUri" Value="file:///C:/Learning/GitHub/DotNetCoreSamples/SelfHostedWebsite/SelfHosted.Models/bin/Debug/netstandard2.0/SelfHosted.Models.dll" />
     <Path Id="dd883949-25f5-49f2-89af-1c9b0cfe6235.OutputPath" Value="C:\Learning\GitHub\DotNetCoreSamples\SelfHostedWebsite\SelfHosted.Website\bin\Debug\netstandard2.0\SelfHosted.Website.dll" />
-    <Path Id="dd883949-25f5-49f2-89af-1c9b0cfe6235.OutputPathUri" Value="file:///C:/Learning/GitHub/DotNetCoreSamples/SelfHostedWebsite/SelfHosted.Website/bin/Debug/netstandard2.0/SelfHosted.Website.dll" />
+    <Path Id="e208abe7-5823-46ed-9d04-29e6d91b70cf.OutputPath" Value="C:\Learning\GitHub\DotNetCoreSamples\SelfHostedWebsite\SelfHosted.WebApiClients\bin\Debug\netstandard2.0\SelfHosted.WebApiClients.dll" />
+    <Path Id="e208abe7-5823-46ed-9d04-29e6d91b70cf.OutputPathUri" Value="file:///C:/Learning/GitHub/DotNetCoreSamples/SelfHostedWebsite/SelfHosted.WebApiClients/bin/Debug/netstandard2.0/SelfHosted.WebApiClients.dll" />
     <Path Id="ff8b4e96-e51b-4d6c-aa92-883daefc41c5.OutputPath" Value="C:\Learning\GitHub\DotNetCoreSamples\SelfHostedWebsite\SelfHosted.Console\bin\Debug\netcoreapp2.0\SelfHosted.Console.dll" />
     <Path Id="ff8b4e96-e51b-4d6c-aa92-883daefc41c5.OutputPathUri" Value="file:///C:/Learning/GitHub/DotNetCoreSamples/SelfHostedWebsite/SelfHosted.Console/bin/Debug/netcoreapp2.0/SelfHosted.Console.dll" />
   </Paths>
