@@ -50,6 +50,7 @@ namespace SelfHosted.Website
                     options.AddViews();
                     options.AddCompilationAssemblies();
                 });
+
             services.AddStaticFiles();
 
 
@@ -72,12 +73,14 @@ namespace SelfHosted.Website
             {
                 app.UseDeveloperExceptionPage();
                 app.UseStatusCodePages();
+                app.UseBrowserLink();
             }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            app.UseDefaultFiles();
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
