@@ -9,6 +9,7 @@ using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace SelfHosted.Website
 {
@@ -29,7 +30,7 @@ namespace SelfHosted.Website
                .Concat(new[] { // additional assemblies used in Razor pages:
                         typeof(HtmlString).Assembly, // Microsoft.AspNetCore.Html.Abstractions
                         typeof(IViewLocalizer).Assembly, // Microsoft.AspNetCore.Mvc.Localization
-                        typeof(IRequestCultureFeature).Assembly // Microsoft.AspNetCore.Localization
+                        typeof(IRequestCultureFeature).Assembly, // Microsoft.AspNetCore.Localization
                })
                .Select(x => MetadataReference.CreateFromFile(x.Location))
                .ToArray();

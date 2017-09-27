@@ -10,7 +10,6 @@
   <ItemGroup>
     <Content Remove="Views\Home\Error.cshtml" />
     <Content Remove="Views\Home\Index.cshtml" />
-    <Content Remove="Views\Shared\_Layout.cshtml" />
     <Content Remove="Views\User\Users.cshtml" />
     <Content Remove="Views\_ViewStart.cshtml" />
   </ItemGroup>
@@ -28,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\SelfHosted.Website\Views\Shared\_Layout.cshtml" Link="Views\Shared\_Layout.cshtml" />
     <None Include="..\SelfHosted.Website\Views\User\Users.cshtml" Link="Views\User\Users.cshtml" />
     <None Include="..\SelfHosted.Website\Views\_ViewStart.cshtml" Link="Views\_ViewStart.cshtml" />
     <None Include="appsettings.json">
